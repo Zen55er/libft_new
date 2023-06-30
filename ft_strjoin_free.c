@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   smart_compare.c                                    :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gacorrei <gacorrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/19 12:31:34 by gacorrei          #+#    #+#             */
-/*   Updated: 2023/06/20 12:32:43 by gacorrei         ###   ########.fr       */
+/*   Created: 2023/06/30 17:56:21 by gacorrei          #+#    #+#             */
+/*   Updated: 2023/06/30 18:12:14 by gacorrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	smart_compare(char *str1, char *str2)
+char	*ft_strjoin_free(char *s1, char *s2)
 {
-	int		len;
+	char	*new_str;
 
-	len = len_compare(str1, str2);
-	return (ft_strncmp(str1, str2, len));
+	new_str = ft_strjoin(s1, s2);
+	free(s1);
+	free(s2);
+	return (new_str);
 }
