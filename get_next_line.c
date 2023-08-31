@@ -6,7 +6,7 @@
 /*   By: gacorrei <gacorrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 09:38:20 by gacorrei          #+#    #+#             */
-/*   Updated: 2023/08/31 15:17:18 by gacorrei         ###   ########.fr       */
+/*   Updated: 2023/08/31 15:42:54 by gacorrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*gnl(int fd)
 		return (0);
 	line = ft_strjoin2(0, buffer);
 	if (fix_buffer(buffer))
-		return (line);
+		return (remove_nl(line));
 	buf = 1;
 	while (buf > 0)
 	{
